@@ -1,0 +1,19 @@
+{
+  "name": "jouffemaeva_3_03-04-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass":"SASS --watch sass/style.scss:CSS/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maeva-jouffe/JouffeMaeva_3_03-04-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maeva-jouffe/JouffeMaeva_3_03-04-2021/issues"
+  },
+  "homepage": "https://github.com/maeva-jouffe/JouffeMaeva_3_03-04-2021#readme"
+}
