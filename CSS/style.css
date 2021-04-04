@@ -1,3 +1,199 @@
+@font-face {
+  font-family: "robotoregular";
+  src: url("../fonts/Roboto-Regular-webfont.eot");
+  src: url("../fonts/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular-webfont.woff2") format("woff2"), url("../fonts/Roboto-Regular-webfont.woff") format("woff"), url("../fonts/Roboto-Regular-webfont.ttf") format("truetype"), url("../fonts/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Shrikhand";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/shrikhand-v6-latin-regular.eot");
+  src: local(""), url("../fonts/shrikhand-v6-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/shrikhand-v6-latin-regular.woff2") format("woff2"), url("../fonts/shrikhand-v6-latin-regular.woff") format("woff"), url("../fonts/shrikhand-v6-latin-regular.ttf") format("truetype"), url("../fonts/shrikhand-v6-latin-regular.svg#Shrikhand") format("svg");
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("../fonts/Roboto-Bold-webfont.eot");
+  src: url("../fonts/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold-webfont.woff2") format("woff2"), url("../fonts/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/Roboto-Bold-webfont.ttf") format("truetype"), url("../fonts/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "robotoregular", arial, "sans serif";
+}
 
+.h2--font {
+  font-family: "Shrikhand", "impact";
+  font-size: 6.2em;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+
+#logo {
+  width: 47%;
+  padding: 2em 0em 1em 0em;
+}
+
+.btn {
+  height: 2.7em;
+  width: 65%;
+  border-radius: 4.5em 4.5em 4.5em 4.5em;
+  background: linear-gradient(#ea72da, #9356dc);
+  color: white;
+  font-size: 3em;
+  border: white;
+  margin: 0.9em 0em 2.9em 0em;
+}
+
+#map {
+  background-color: #EAEAEA;
+  box-shadow: inset 0 3px 5px -5px #2c2c2c;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.9em;
+}
+#map p {
+  margin-left: 0.9em;
+}
+
+img {
+  width: 20em;
+}
+
+h1 {
+  font-size: 3.5em;
+  padding: 0em 2em 0em 2em;
+  margin: 0;
+}
+
+#presentation {
+  background-color: #F6F6F6;
+  padding-top: 2em;
+}
+#presentation p {
+  color: #7E7E7E;
+  font-size: 3.3em;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav h2 {
+  font-size: 3.8em;
+  left: 1em;
+  align-self: flex-start;
+  margin: 1.5em 0em 0.5em 1em;
+}
+
+.nav__fonctionnement {
+  height: 4em;
+  width: 21em;
+  box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+  background: #F6F6F6;
+  border-radius: 1.1em;
+  margin: 1em 0em 1em 0em;
+  font-size: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.nav__fonctionnement i {
+  margin: 0em 1em 0em 1.7em;
+  color: #7E7E7E;
+  font-size: 1.3em;
+}
+
+.number {
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1.2em;
+}
+
+section {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section h2 {
+  font-size: 3.8em;
+  left: 1em;
+  align-self: flex-start;
+  margin: 1.5em 0em 0.5em 1em;
+}
+
+.restaurant_card {
+  background-color: white;
+  width: 90%;
+  height: 41em;
+  border-radius: 2.1em;
+  margin: 1em 0em 3em 0em;
+  box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+}
+.restaurant_card img {
+  width: 100%;
+  height: 28em;
+  border-radius: 2.1em 2.1em 0em 0em;
+  object-fit: cover;
+}
+.restaurant_card h3 {
+  font-size: 3.5em;
+  font-family: "robotobold";
+  margin: 0.5em 0em 0em 0.8em;
+}
+.restaurant_card p {
+  font-size: 2.7em;
+  margin: 0.2em 0em 0em 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #353535;
+  display: flex;
+  flex-direction: column;
+  margin: 6em -1em -1em -1em;
+}
+footer img {
+  width: 17em;
+  margin: 3em 0em 0em 5em;
+}
+footer a {
+  color: white;
+}
+footer ul {
+  list-style-type: none;
+  font-size: 2.7em;
+}
+footer li {
+  margin: 0em 0em 0.3em 1em;
+}
+
+.fa-hands-helping:before {
+  margin-right: 0.55em;
+}
+
+.fa-utensils:before {
+  margin-right: 1em;
+}
 
 /*# sourceMappingURL=style.css.map */
