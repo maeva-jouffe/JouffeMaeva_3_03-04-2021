@@ -2,3 +2,14 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $color-background: #F6F6F6;
+
+@mixin btn{
+    height: 2.7em;
+    width: 65%;
+    border-radius: 4.5em 4.5em 4.5em 4.5em;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    font-size: 3em;
+    border: white;
+    margin: 0.9em 0em 2.9em 0em;
+}
