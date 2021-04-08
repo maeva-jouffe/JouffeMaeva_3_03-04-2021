@@ -19,13 +19,27 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "robotolight";
+  src: url("../fonts/Roboto-Light-webfont.eot");
+  src: url("../fonts/Roboto-Light-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light-webfont.woff2") format("woff2"), url("../fonts/Roboto-Light-webfont.woff") format("woff"), url("../fonts/Roboto-Light-webfont.ttf") format("truetype"), url("../fonts/Roboto-Light-webfont.svg#robotolight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: "robotoregular", arial, "sans serif";
 }
 
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 .h2--font {
   font-family: "Shrikhand", "impact";
-  font-size: 6.2em;
+  font-size: 4.7em;
+  padding: 0.8em 0em 0em 0.6em;
+  margin-bottom: 0em;
 }
 
 header {
@@ -62,12 +76,8 @@ header {
   margin-left: 0.9em;
 }
 
-img {
-  width: 20em;
-}
-
 h1 {
-  font-size: 3.5em;
+  font-size: 3.9em;
   padding: 0em 2em 0em 2em;
   margin: 0;
 }
@@ -125,40 +135,58 @@ nav h2 {
   left: 1.2em;
 }
 
-section {
+#accueil {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 8em;
+  margin: 9em 0em -6em 0em;
 }
-section h2 {
+#accueil h2 {
   font-size: 3.8em;
   left: 1em;
   align-self: flex-start;
   margin: 1.5em 0em 0.5em 1em;
 }
+#accueilimg {
+  width: 20em;
+}
 
-.restaurant_card {
+.restaurant__card--tag {
+  background-color: #99e2d0;
+  color: #189576;
+  width: 5em;
+  position: absolute;
+  font-size: 3em;
+  text-align: center;
+  top: 0.8em;
+  right: 0.8em;
+  border-radius: 0.2em;
+}
+
+.restaurant__card {
   background-color: white;
   width: 90%;
   height: 41em;
   border-radius: 2.1em;
   margin: 1em 0em 3em 0em;
   box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+  position: relative;
 }
-.restaurant_card img {
+.restaurant__card img {
   width: 100%;
   height: 28em;
   border-radius: 2.1em 2.1em 0em 0em;
   object-fit: cover;
 }
-.restaurant_card h3 {
+.restaurant__card h3 {
   font-size: 3.5em;
   font-family: "robotobold";
   margin: 0.5em 0em 0em 0.8em;
 }
-.restaurant_card p {
+.restaurant__card p {
   font-size: 2.7em;
   margin: 0.2em 0em 0em 1em;
 }
@@ -194,6 +222,61 @@ footer li {
 
 .fa-utensils:before {
   margin-right: 1em;
+}
+
+/*La palette du gout*/
+.fa-arrow-left:before {
+  position: absolute;
+  font-size: 4em;
+  left: 1em;
+  top: 0.75em;
+}
+
+main img {
+  width: 100%;
+  margin: 1em 0em -1em 0em;
+}
+
+.section__menu {
+  position: relative;
+  background-color: #F6F6F6;
+  width: 100%;
+  border-radius: 4em 4em 0em 0em;
+  margin-top: -12em;
+  display: flex;
+  flex-direction: column;
+}
+.section__menu h3 {
+  font-family: "robotolight";
+}
+
+.menu__title {
+  margin: 6em 0em 3em 3em;
+}
+.menu__title--underline {
+  border-top: 11px solid #99E2D0;
+  width: 9em;
+}
+
+.menu__element {
+  background-color: white;
+  border-radius: 2em;
+  box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+  width: 90%;
+  margin: auto;
+}
+.menu__element__description {
+  display: flex;
+  align-items: center;
+  font-size: 3.2em;
+  margin: -1em 0em 0em 0em;
+}
+.menu__element__price {
+  position: absolute;
+  right: 2.5em;
+}
+.menu__element p {
+  font-family: "robotolight";
 }
 
 /*# sourceMappingURL=style.css.map */

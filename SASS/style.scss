@@ -15,12 +15,8 @@
     }
 }
 
-img{
-    width: 20em;
-}
-
 h1{
-    font-size: 3.5em;
+    font-size: 3.9em;
     padding: 0em 2em 0em 2em;
     margin: 0;
 }
@@ -45,6 +41,7 @@ nav{
         margin: 1.5em 0em 0.5em 1em;
     }
 }
+
 .nav__fonctionnement{
     height: 4em;
     width: 21em;
@@ -77,27 +74,46 @@ nav{
     left: 1.2em;
 }
 
-section{
+#accueil{
     background-color: $color-background;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 8em;
+    margin: 9em 0em -6em 0em;
     h2{
         font-size: 3.8em;
         left: 1em;
         align-self:flex-start;
         margin: 1.5em 0em 0.5em 1em;
     }
+    &img{
+        width: 20em;
+    }
 }
 
-.restaurant_card{
+.restaurant__card--tag{
+    background-color: #99e2d0;
+    color: #189576;
+    width: 5em;
+    position: absolute;
+    font-size: 3em;
+    text-align: center;
+    top: 0.8em;
+    right: 0.8em;
+    border-radius: 0.2em;
+
+}
+.restaurant__card{
     background-color: white;
     width: 90%;
     height: 41em;
     border-radius: 2.1em;
     margin: 1em 0em 3em 0em;
     box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+    position: relative;
+
     img{
         width: 100%;
         height: 28em;
@@ -114,6 +130,7 @@ section{
         margin: 0.2em 0em 0em 1em;
     }
 }
+
 a{
     text-decoration: none;
 }
@@ -140,7 +157,6 @@ footer{
         margin: 0em 0em 0.3em 1em;
     }
 
-
 }
 .fa-hands-helping:before{
     margin-right: 0.55em;
@@ -148,4 +164,61 @@ footer{
 
 .fa-utensils:before{
     margin-right: 1em;
+}
+/*La palette du gout*/
+
+.fa-arrow-left:before{
+    position: absolute;
+    font-size: 4em;
+    left: 1em;
+    top: 0.75em;
+}
+main img{
+    width: 100%;
+    margin: 1em 0em -1em 0em;
+   
+
+}
+.section__menu{
+    position: relative;
+    background-color: $color-background;
+    width: 100%;
+    border-radius: 4em 4em 0em 0em;
+    margin-top: -12em;
+    display: flex;
+    flex-direction: column;
+    & h3{
+        font-family: 'robotolight';
+        
+    }
+}
+.menu__title{
+    margin: 6em 0em 3em 3em;
+    &--underline{
+        border-top: 11px solid $color-tertiary;
+    width: 9em;
+    }
+}
+
+
+.menu__element{
+    background-color: white;
+    border-radius: 2em;
+    box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+    width: 90%;
+    margin: auto;
+    &__description{
+        display: flex;
+        align-items: center;
+        font-size: 3.2em;
+        margin: -1em 0em 0em 0em;
+    }
+    &__price{
+        position: absolute;
+        right: 2.5em;
+       
+    }
+    & p{
+        font-family: 'robotolight';
+    }
 }

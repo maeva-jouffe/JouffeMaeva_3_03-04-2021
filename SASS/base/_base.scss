@@ -34,14 +34,33 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'robotolight';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff2') format('woff2'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#robotolight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body{
     font-family: 'robotoregular', arial, "sans serif";
 }
 
+body, html{
+    margin: 0;
+    padding: 0;
+}
+
 .h2--font{
     font-family: 'Shrikhand', "impact";
-    font-size: 6.2em;
+    font-size: 4.7em;
+    padding: 0.8em 0em 0em 0.6em;
+    margin-bottom: 0em;
 }
 
   
