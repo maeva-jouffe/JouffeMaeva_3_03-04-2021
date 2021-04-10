@@ -8,3 +8,22 @@ header{
     padding: 2em 0em 1em 0em; 
 }
 
+footer{
+    background-color: #353535;
+    display: flex;
+    flex-direction: column;
+    img{
+        width: 17em;
+        margin: 3em 0em 0em 5em;
+    }
+    a{
+        color: white;
+    }
+    ul{
+        list-style-type: none;
+        font-size: 2.7em;
+    }
+    li{
+        margin: 0em 0em 0.3em 1em;
+    }
+}
