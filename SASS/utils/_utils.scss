@@ -26,3 +26,44 @@ $color-button: linear-gradient($color-secondary, $color-primary);
     margin: 0.9em 0em 2.9em 0em;
     box-shadow: 0em 1.5em 1.9em -0.8em #2c2c2c;
 }
+
+/*keyframes des animations*/
+@keyframes container{
+    0%{
+        opacity: 1;
+    }
+    98%{
+        opacity: 0.9;
+    }
+    99%{
+        opacity: 0.95;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loader{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(7em);
+    }  
+}
+
+@keyframes menu{
+    0%{
+        transform: translateY(2em);
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.4;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
