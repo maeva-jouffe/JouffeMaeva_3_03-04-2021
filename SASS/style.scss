@@ -1,6 +1,7 @@
 @import "./utils/utils.scss";
 @import "./base/base.scss";
 @import "./layouts/layouts.scss";
+@import "./mediaqueries/mediaqueries.scss";
 
 #map{
     background-color: $color-background-darken;
@@ -20,23 +21,21 @@
     &:hover{
         @include btnhover;
     }
-  
-    
 }
+
 .menu__button{
     text-align: center;
     margin: 4em 0em 0em 0em;
 }
 
 h1{
-    font-size: 3.9em;
-    padding: 0em 2em 0em 2em;
+    font-size: 3.5em;
+    padding: 1em 3em 0em 3em;
     margin: 0;
 }
 
 #presentation{
     background-color: $color-background;
-    padding-top: 2em;
     p{
         color: #7E7E7E;
         font-size: 1.71em;
@@ -49,7 +48,7 @@ nav{
     flex-direction: column; 
     align-items: center;
     h2{
-        font-size: 3.8em;
+        font-size: 3.5em;
         left: 1em;
         align-self:flex-start;
         margin: 1.5em 0em 0.5em 1em;
@@ -59,7 +58,7 @@ nav{
 .nav__fonctionnement{
     height: 4em;
     width: 21em;
-    box-shadow: 0.2em 0.4em 0.3em $color-background-darken;
+    @include box-shadow;
     background: $color-background;
     border-radius: 1.1em;
     margin: 1em 0em 1em 0em;
@@ -67,6 +66,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: left;
+    font-family: 'robotobold';
     i{
         margin: 0em 1em 0em 1.7em;
         color: #7E7E7E;
@@ -110,11 +110,15 @@ nav{
 
 .restaurant__card--tag{
     background-color: #99e2d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #189576;
     width: 5em;
+    height: 2em;
     position: absolute;
-    font-size: 3em;
-    text-align: center;
+    font-size: 2.5em;
+    font-family: 'robotobold';
     top: 0.8em;
     right: 0.8em;
     border-radius: 0.2em;
@@ -163,7 +167,11 @@ a{
 .fa-utensils:before{
     margin-right: 1em;
 }
-/*La palette du gout*/
+/*pages menu*/
+
+.coeurtitre{
+    margin-left: 1.5em;
+}
 
 .fa-arrow-left:before{
     position: absolute;
@@ -180,38 +188,43 @@ main img{
     position: relative;
     background-color: $color-background;
     width: 100%;
-    border-radius: 4em 4em 0em 0em;
+    border-radius: 7em 7em 0em 0em;
     margin-top: -12em;
     display: flex;
     flex-direction: column;
     & h2{
-        font-family: 'robotolight';  
+        font-family: 'robotolight';
+        font-size: 1em;
     }
-    
 }
 
 .section__menu h3{
     margin: 3em 0em 0em 0em;
     padding-top: 2em;
+    font-family: 'robotobold'; 
 }
 
 .menu__title{
     margin: 6em 0em 3em 3em;
     &--underline{
         border-top: 6px solid $color-tertiary;
-    width: 9em;
+        width: 8em;
     }
 }
 
 .menu__element{
     background-color: white;
     border-radius: 2.5em;
-    box-shadow: 0.2em 0.4em 0.3em $color-background-darken;
+    @include box-shadow;
     width: 90%;
     margin: auto;
+    cursor: pointer;
+    padding-left: 1.5em;
     &__price{
         position: absolute;
-        right: 1.5em; 
+        right: 1.5em;
+        font-weight: bold;
+      
     }
     &__description{
         display: flex;
@@ -225,7 +238,6 @@ main img{
             font-family: 'robotolight';
             width: 16em;
         }
-        
     }   
 }
 
@@ -313,6 +325,13 @@ h3{
     animation: menu 1s ease-in-out 0.9s both;
 }
 
+/*cloche et check*/
+.check{
+    color: white;
+    border-radius: 100%;
+    overflow: hidden;
+    font-size: 3.5em;
+}
 
 .cloche{
     background-color: $color-tertiary;
@@ -322,15 +341,18 @@ h3{
     top: 0;
     right: 0;
     width: 18%;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
     border-radius: 0em 2.5em 2.5em 0em;
-    transform-origin: right; 
+    transform-origin: right;
 }
 
-.check{
-    color: white;
-    border-radius: 100%;
-    background-color: $color-tertiary;
-    font-size: 3.5em;  
+.menu__element:active .cloche{
+   animation: cloche 1s forwards;
+   >.check{
+       animation: check 1s forwards;
+       overflow: hidden;   
+   }
 }
+

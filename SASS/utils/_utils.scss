@@ -4,6 +4,11 @@ $color-tertiary: #99E2D0;
 $color-background: #F6F6F6;
 $color-background-darken: #EAEAEA;
 $color-button: linear-gradient($color-secondary, $color-primary);
+
+@mixin box-shadow{
+    box-shadow: 0.2em 0.5em 1em #cecece;
+}
+
 @mixin btn{
     height: 2.7em;
     width: 65%;
@@ -25,6 +30,7 @@ $color-button: linear-gradient($color-secondary, $color-primary);
     border: white;
     margin: 0.9em 0em 2.9em 0em;
     box-shadow: 0em 1.5em 1.9em -0.8em #2c2c2c;
+    cursor: pointer;
 }
 
 /*keyframes des animations*/
@@ -64,6 +70,26 @@ $color-button: linear-gradient($color-secondary, $color-primary);
     100%{
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes check{
+    0%{
+        transform: rotate(0deg); 
+    }
+    100%{
+        transform: rotate(360deg); 
+    }
+}
+
+@keyframes cloche{
+    0%{
+        transform: scaleX(0);
+        visibility: visible;
+    }
+    100%{
+        transform: scaleX(1);
+        visibility: visible;
     }
 }
 

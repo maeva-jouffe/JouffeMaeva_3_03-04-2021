@@ -36,6 +36,24 @@
     opacity: 1;
   }
 }
+@keyframes check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes cloche {
+  0% {
+    transform: scaleX(0);
+    visibility: visible;
+  }
+  100% {
+    transform: scaleX(1);
+    visibility: visible;
+  }
+}
 @font-face {
   font-family: "robotoregular";
   src: url("../fonts/Roboto-Regular-webfont.eot");
@@ -75,7 +93,7 @@ body, html {
 
 .h1--font {
   font-family: "Shrikhand", "impact";
-  font-size: 4.7em;
+  font-size: 4.3em;
   padding: 0.8em 0em 0em 0.6em;
   margin-bottom: 0em;
 }
@@ -110,6 +128,11 @@ footer li {
   margin: 0em 0em 0.3em 1em;
 }
 
+@media all and (min-width: 768px) {
+  #accueil {
+    flex-direction: row;
+  }
+}
 #map {
   background-color: #EAEAEA;
   box-shadow: inset 0 3px 5px -5px #2c2c2c;
@@ -144,6 +167,7 @@ footer li {
   border: white;
   margin: 0.9em 0em 2.9em 0em;
   box-shadow: 0em 1.5em 1.9em -0.8em #2c2c2c;
+  cursor: pointer;
 }
 
 .menu__button {
@@ -152,14 +176,13 @@ footer li {
 }
 
 h1 {
-  font-size: 3.9em;
-  padding: 0em 2em 0em 2em;
+  font-size: 3.5em;
+  padding: 1em 3em 0em 3em;
   margin: 0;
 }
 
 #presentation {
   background-color: #F6F6F6;
-  padding-top: 2em;
 }
 #presentation p {
   color: #7E7E7E;
@@ -173,7 +196,7 @@ nav {
   align-items: center;
 }
 nav h2 {
-  font-size: 3.8em;
+  font-size: 3.5em;
   left: 1em;
   align-self: flex-start;
   margin: 1.5em 0em 0.5em 1em;
@@ -182,7 +205,7 @@ nav h2 {
 .nav__fonctionnement {
   height: 4em;
   width: 21em;
-  box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+  box-shadow: 0.2em 0.5em 1em #cecece;
   background: #F6F6F6;
   border-radius: 1.1em;
   margin: 1em 0em 1em 0em;
@@ -190,6 +213,7 @@ nav h2 {
   display: flex;
   align-items: center;
   justify-content: left;
+  font-family: "robotobold";
 }
 .nav__fonctionnement i {
   margin: 0em 1em 0em 1.7em;
@@ -232,11 +256,15 @@ nav h2 {
 
 .restaurant__card--tag {
   background-color: #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #189576;
   width: 5em;
+  height: 2em;
   position: absolute;
-  font-size: 3em;
-  text-align: center;
+  font-size: 2.5em;
+  font-family: "robotobold";
   top: 0.8em;
   right: 0.8em;
   border-radius: 0.2em;
@@ -285,7 +313,11 @@ a:visited {
   margin-right: 1em;
 }
 
-/*La palette du gout*/
+/*pages menu*/
+.coeurtitre {
+  margin-left: 1.5em;
+}
+
 .fa-arrow-left:before {
   position: absolute;
   font-size: 4em;
@@ -302,18 +334,20 @@ main img {
   position: relative;
   background-color: #F6F6F6;
   width: 100%;
-  border-radius: 4em 4em 0em 0em;
+  border-radius: 7em 7em 0em 0em;
   margin-top: -12em;
   display: flex;
   flex-direction: column;
 }
 .section__menu h2 {
   font-family: "robotolight";
+  font-size: 1em;
 }
 
 .section__menu h3 {
   margin: 3em 0em 0em 0em;
   padding-top: 2em;
+  font-family: "robotobold";
 }
 
 .menu__title {
@@ -321,19 +355,22 @@ main img {
 }
 .menu__title--underline {
   border-top: 6px solid #99E2D0;
-  width: 9em;
+  width: 8em;
 }
 
 .menu__element {
   background-color: white;
   border-radius: 2.5em;
-  box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
+  box-shadow: 0.2em 0.5em 1em #cecece;
   width: 90%;
   margin: auto;
+  cursor: pointer;
+  padding-left: 1.5em;
 }
 .menu__element__price {
   position: absolute;
   right: 1.5em;
+  font-weight: bold;
 }
 .menu__element__description {
   display: flex;
@@ -429,6 +466,14 @@ h3 {
   animation: menu 1s ease-in-out 0.9s both;
 }
 
+/*cloche et check*/
+.check {
+  color: white;
+  border-radius: 100%;
+  overflow: hidden;
+  font-size: 3.5em;
+}
+
 .cloche {
   background-color: #99E2D0;
   height: 100%;
@@ -437,17 +482,19 @@ h3 {
   top: 0;
   right: 0;
   width: 18%;
+  visibility: hidden;
   align-items: center;
   justify-content: center;
   border-radius: 0em 2.5em 2.5em 0em;
   transform-origin: right;
 }
 
-.check {
-  color: white;
-  border-radius: 100%;
-  background-color: #99E2D0;
-  font-size: 3.5em;
+.menu__element:active .cloche {
+  animation: cloche 1s forwards;
+}
+.menu__element:active .cloche > .check {
+  animation: check 1s forwards;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
