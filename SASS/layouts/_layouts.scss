@@ -5,13 +5,14 @@ header{
 
 #logo{
     width: 47%;
-    padding: 2em 0em 1em 0em; 
+    padding: 4em 0em 1em 0em; 
 }
 
 footer{
     background-color: #353535;
     display: flex;
     flex-direction: column;
+    margin-top: 5em;
     img{
         width: 17em;
         margin: 3em 0em 0em 5em;
@@ -26,4 +27,11 @@ footer{
     li{
         margin: 0em 0em 0.3em 1em;
     }
+}
+
+.h1--font{
+    font-family: 'Shrikhand', "impact";
+    font-size: 4.3em;
+    padding: 0.8em 0em 0em 0.6em;
+    margin-bottom: 0em;
 }
