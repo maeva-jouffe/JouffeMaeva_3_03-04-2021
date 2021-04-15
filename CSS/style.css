@@ -46,12 +46,10 @@
 }
 @keyframes cloche {
   0% {
-    transform: scaleX(0);
-    visibility: visible;
+    width: 0;
   }
   100% {
-    transform: scaleX(1);
-    visibility: visible;
+    width: 9em;
   }
 }
 @font-face {
@@ -91,13 +89,6 @@ body, html {
   padding: 0;
 }
 
-.h1--font {
-  font-family: "Shrikhand", "impact";
-  font-size: 4.3em;
-  padding: 0.8em 0em 0em 0.6em;
-  margin-bottom: 0em;
-}
-
 header {
   width: 100%;
   text-align: center;
@@ -105,13 +96,14 @@ header {
 
 #logo {
   width: 47%;
-  padding: 2em 0em 1em 0em;
+  padding: 4em 0em 1em 0em;
 }
 
 footer {
   background-color: #353535;
   display: flex;
   flex-direction: column;
+  margin-top: 5em;
 }
 footer img {
   width: 17em;
@@ -128,7 +120,14 @@ footer li {
   margin: 0em 0em 0.3em 1em;
 }
 
-@media all and (min-width: 768px) {
+.h1--font {
+  font-family: "Shrikhand", "impact";
+  font-size: 4.3em;
+  padding: 0.8em 0em 0em 0.6em;
+  margin-bottom: 0em;
+}
+
+@media all and (max-width: 1024px) {
   #accueil {
     flex-direction: row;
   }
@@ -320,9 +319,9 @@ a:visited {
 
 .fa-arrow-left:before {
   position: absolute;
-  font-size: 4em;
+  font-size: 3.5em;
   left: 1em;
-  top: 0.75em;
+  top: 1.3em;
 }
 
 main img {
@@ -341,21 +340,16 @@ main img {
 }
 .section__menu h2 {
   font-family: "robotolight";
-  font-size: 1em;
-}
-
-.section__menu h3 {
-  margin: 3em 0em 0em 0em;
-  padding-top: 2em;
-  font-family: "robotobold";
+  font-size: 2.5em;
 }
 
 .menu__title {
-  margin: 6em 0em 3em 3em;
+  margin: 6em 0em 0em 3em;
 }
 .menu__title--underline {
-  border-top: 6px solid #99E2D0;
-  width: 8em;
+  border-top: 9px solid #99E2D0;
+  width: 6.5em;
+  margin: -1.3em 0em 2em 0em;
 }
 
 .menu__element {
@@ -364,34 +358,46 @@ main img {
   box-shadow: 0.2em 0.5em 1em #cecece;
   width: 90%;
   margin: auto;
+  margin-bottom: 2.5em;
   cursor: pointer;
-  padding-left: 1.5em;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.menu__element__texte {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .menu__element__price {
-  position: absolute;
-  right: 1.5em;
+  margin: 0em 1em 1em 0em;
   font-weight: bold;
+  font-size: 2.5em;
 }
+
 .menu__element__description {
   display: flex;
   align-items: center;
-  font-size: 2.7em;
-  margin: -0.9em 0em 0em 0em;
 }
 .menu__element__description p {
+  flex-grow: 1;
+  font-size: 2.5em;
+  margin: 0.2em 0em 0.8em 0.5em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: "robotolight";
-  width: 16em;
+  max-width: 18.2em;
 }
 
 h3 {
-  font-size: 0.9em;
+  font-size: 2.8em;
+  margin: 0em 0em 0em 0.5em;
+  padding-top: 0.5em;
+  font-family: "robotobold";
 }
 
 /*animations*/
-/*coeur*/
+/*coeur accueil*/
 .coeur {
   position: absolute;
   right: 1em;
@@ -413,6 +419,28 @@ h3 {
   transition: opacity 400ms;
 }
 .coeur-plein:active {
+  opacity: 1;
+}
+
+/*coeur menu*/
+.coeurmenu {
+  position: absolute;
+  right: 1.5em;
+  top: 1em;
+}
+
+.coeur-pleinmenu {
+  background-image: linear-gradient(10deg, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 400ms;
+  position: absolute;
+  right: 1.5em;
+  top: 1em;
+}
+.coeur-pleinmenu:active {
   opacity: 1;
 }
 
@@ -476,17 +504,12 @@ h3 {
 
 .cloche {
   background-color: #99E2D0;
-  height: 100%;
-  position: absolute;
   display: flex;
-  top: 0;
-  right: 0;
-  width: 18%;
-  visibility: hidden;
+  width: 0;
+  overflow: hidden;
   align-items: center;
   justify-content: center;
   border-radius: 0em 2.5em 2.5em 0em;
-  transform-origin: right;
 }
 
 .menu__element:active .cloche {
