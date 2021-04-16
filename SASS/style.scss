@@ -1,7 +1,6 @@
 @import "./utils/utils.scss";
 @import "./base/base.scss";
 @import "./layouts/layouts.scss";
-@import "./mediaqueries/mediaqueries.scss";
 
 #map{
     background-color: $color-background-darken;
@@ -11,6 +10,10 @@
     align-items: center;
     justify-content: center;
     font-size: 2.9em;
+    @media screen and (min-width: 1024px){
+        font-size: 1.9em;
+        height: 2em;
+    } 
     p{
         margin-left: 0.9em;
     }
@@ -18,8 +21,16 @@
 
 .btn{
     @include btn;
+    margin-bottom: 1em;
+    @media screen and (min-width: 1024px){
+        font-size: 1.3em
+    }
     &:hover{
         @include btnhover;
+        margin-bottom: 1em;
+        @media screen and (min-width: 1024px){
+            font-size: 1.3em;
+        }
     }
 }
 
@@ -28,14 +39,16 @@
     margin: 4em 0em 0em 0em;
 }
 
-h1{
-    font-size: 3.5em;
-    padding: 1em 3em 0em 3em;
-    margin: 0;
-}
-
 #presentation{
     background-color: $color-background;
+    &h1{
+        font-size: 3.5em;
+        padding: 1em 3em 0em 3em;
+        margin: 0;
+        @media screen and (min-width: 1024px){
+            font-size: 2.5em;
+        }
+    }
     p{
         color: #7E7E7E;
         font-size: 1.71em;
@@ -47,11 +60,20 @@ nav{
     display: flex;
     flex-direction: column; 
     align-items: center;
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
     h2{
         font-size: 3.5em;
         left: 1em;
         align-self:flex-start;
         margin: 1.5em 0em 0.5em 1em;
+        @media screen and (min-width: 1024px){
+            width: 100%;
+            font-size: 1.8em;
+        }
     }
 }
 
@@ -67,13 +89,24 @@ nav{
     align-items: center;
     justify-content: left;
     font-family: 'robotobold';
+    @media screen and (min-width: 1024px){
+        width: 30%;
+        font-size: 1em;
+        position: relative;
+        justify-content: center;
+    }
+    @media screen and (min-width: 2500px){
+        font-size: 2em;
+    }
     i{
         margin: 0em 1em 0em 1.7em;
         color: #7E7E7E;
         font-size: 1.3em;
+        @media screen and (min-width: 1024px){
+            margin: 0em 0.5em 0em 0.7em;
+        }
     }
 }
-
 
 .number{
     color: white;
@@ -87,6 +120,10 @@ nav{
     justify-content: center;
     position: absolute;
     left: 1.2em;
+    @media screen and (min-width: 1024px){
+        top: -1em;
+        left: 50%;
+    }
 }
 
 #accueil{
@@ -97,15 +134,27 @@ nav{
     justify-content: center;
     padding-bottom: 8em;
     margin: 9em 0em -6em 0em;
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 2em 0em -9em 0em;
+    } 
     h2{
         font-size: 3.8em;
         left: 1em;
         align-self:flex-start;
         margin: 1.5em 0em 0.5em 1em;
+        @media screen and (min-width: 1024px){
+            width: 100%;
+            margin: 0.2em 0em 0.2em 0em;
+            text-align: center;
+            font-size: 2.8em;
+        }
     }
     &img{
         width: 20em;
-    }
+    }   
 }
 
 .restaurant__card--tag{
@@ -122,8 +171,11 @@ nav{
     top: 0.8em;
     right: 0.8em;
     border-radius: 0.2em;
-
+    @media screen and (min-width: 1024px){
+        font-size: 1.5em;   
+    }
 }
+
 .restaurant__card{
     background-color: white;
     width: 90%;
@@ -132,25 +184,53 @@ nav{
     margin: 1em 0em 3em 0em;
     box-shadow: 0.2em 0.4em 0.3em $color-background-darken;
     position: relative;
-
+    @media screen and (min-width: 1024px){
+        width: 22%;
+        height: 17em;
+        } 
+        @media screen and (min-width: 2560px){
+            width: 40%;
+            height: 34em;
+        }
     img{
         width: 100%;
         height: 28em;
         border-radius: 2.1em 2.1em 0em 0em;
         object-fit: cover;
+        @media screen and (min-width: 1024px){
+            height: 11em;
+        }
+        @media screen and (min-width: 2560px){
+            height: 27em;
+        }
     }
     h3{
         font-size:3.5em;
         font-family: 'robotobold';
         margin: 0.5em 0em 0em 0.8em;
+        @media screen and (min-width: 1024px){
+            text-align: left;
+            margin: 0em 0em -0.5em 0.3em;
+            font-size: 1.5em;
+        } 
+        @media screen and (min-width: 2560px){
+            font-size: 2.5em;
+        }
     }
     p{
         font-size: 2.7em;
         margin: -0.3em 0em 0em 1em;
-        & a:visited{
-            color: #7E7E7E;
+        @media screen and (min-width: 1024px){
+            margin: -0em 0em 0em 0.5em;
+            font-size: 1em;
+        } 
+        @media screen and (min-width: 2560px){
+            font-size: 2em;
         }
-    }
+            & a:visited{
+            color: #7E7E7E;
+            }
+        }  
 }
 
 a{
@@ -160,14 +240,20 @@ a{
     }
 }
 
-.fa-hands-helping:before{
-    margin-right: 0.55em;
-}
 
-.fa-utensils:before{
-    margin-right: 1em;
-}
 /*pages menu*/
+@media screen and (min-width: 1024px){
+    article{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        width:74%;
+        margin: auto;
+    }
+}
 
 .coeurtitre{
     margin-left: 1.5em;
@@ -181,7 +267,10 @@ a{
 }
 main img{
     width: 100%;
+    height: 48em;
+    border-radius: 3em 3em 0em 0em;
     margin: 1em 0em -1em 0em;
+    object-fit: cover;
 }
 
 .section__menu{
@@ -191,19 +280,29 @@ main img{
     border-radius: 7em 7em 0em 0em;
     margin-top: -12em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     & h2{
         font-family: 'robotolight';
         font-size: 2.5em;
+        @media screen and (min-width: 1024px){
+            font-size: 1.5em;
+        }
     }
 }
 
 .menu__title{
     margin: 6em 0em 0em 3em;
+    @media screen and (min-width: 1024px){
+        margin: 0;
+    }
     &--underline{
         border-top: 9px solid $color-tertiary;
         width: 6.5em;
         margin: -1.3em 0em 2em 0em;
+        @media screen and (min-width: 1024px){
+            border-top: 5px solid $color-tertiary;
+            width: 41.8em;
+        }
     }
 }
 
@@ -217,18 +316,33 @@ main img{
     cursor: pointer;
     display: flex;
     flex-wrap: nowrap;
+    @media screen and (min-width: 1024px){
+        height: 6em;
+        width: 70%;
+        margin-bottom: 1em;
+    }
+    @media screen and (min-width: 2560px){
+        width: 36%;
+    }
     &__texte{
         display:flex;
         flex-direction: column;
         flex-grow: 1;
+        overflow: hidden;
+        @media screen and (min-width: 1024px){
+            padding: 0.5em 0em 0.2em 0.7em;
+        }
     }
- 
     &__price{
         margin: 0em 1em 1em 0em;
         font-weight: bold;
-        font-size: 2.5em;  
+        font-size: 2.5em;
+        @media screen and (min-width: 1024px){
+            font-size: 1.5em;
+        }
     }
 }
+
 .menu__element__description{
     display: flex;
     align-items: center;
@@ -240,15 +354,24 @@ main img{
         overflow: hidden;
         text-overflow: ellipsis;
         font-family: 'robotolight';
-        max-width: 18.2em;
+        @media screen and (min-width: 1024px){
+            font-size: 1.5em;
+        }
     }
 }
 
-h3{
+.menu__element__texte h3{
     font-size: 2.8em;
     margin: 0em 0em 0em 0.5em;
     padding-top: 0.5em;
     font-family: 'robotobold';
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and (min-width: 1024px){
+        padding: 0em 0em 1.5em 0em;
+        font-size: 1.8em;
+    }
 }
 
 /*animations*/
@@ -259,7 +382,15 @@ h3{
     right: 1em;
     bottom: 1.2em;
     font-size: 4.2em;
-    color: #7e7e7e; 
+    color: #7e7e7e;
+    @media screen and (min-width: 1024px){
+        right: 0.5em;
+        bottom: 1em;
+        font-size: 1.8em;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 2.8em;
+    }
 }
 
 .coeur-plein{
@@ -268,6 +399,14 @@ h3{
     right: 1em;
     bottom: 1.2em;
     @include coeur;
+    @media screen and (min-width: 1024px){
+        right: 0.5em;
+        bottom: 1em;
+        font-size: 1.8em;
+    }
+    @media screen and (min-width: 2560px){
+        font-size: 2.8em;
+    }
 }
 
 /*coeur menu*/
@@ -275,15 +414,24 @@ h3{
     position: absolute;
     right: 1.5em;
     top: 1em;
+    @media screen and (min-width: 1024px){
+        right: 50%;
+        top: 0.5em;
+    }
 }
+
 .coeur-pleinmenu{
     @include coeur;
     position: absolute;
     right: 1.5em;
     top: 1em;
+    @media screen and (min-width: 1024px){
+        right: 50%;
+        top: 0.5em;
+    }
 }
 
-#heart1, #heart2, #heart3, #heart4{
+#heart1, #heart2, #heart3, #heart4, #heart5, #heart6, #heart7, #heart8{
     visibility: hidden;
 }
 
