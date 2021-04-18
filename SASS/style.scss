@@ -41,7 +41,7 @@
 
 #presentation{
     background-color: $color-background;
-    &h1{
+    & h1{
         font-size: 3.5em;
         padding: 1em 3em 0em 3em;
         margin: 0;
@@ -49,9 +49,9 @@
             font-size: 2.5em;
         }
     }
-    p{
+    & p{
         color: #7E7E7E;
-        font-size: 1.71em;
+        font-size: 1.91em;
         margin: 1em 1.9em 0em 1.9em;
     }
 }
@@ -78,7 +78,7 @@ nav{
 }
 
 .nav__fonctionnement{
-    height: 4em;
+    height: 5em;
     width: 21em;
     @include box-shadow;
     background: $color-background;
@@ -89,6 +89,9 @@ nav{
     align-items: center;
     justify-content: left;
     font-family: 'robotobold';
+    &:hover{
+        background-color:#f5edff;
+    }
     @media screen and (min-width: 1024px){
         width: 30%;
         font-size: 1em;
@@ -172,7 +175,11 @@ nav{
     right: 0.8em;
     border-radius: 0.2em;
     @media screen and (min-width: 1024px){
-        font-size: 1.5em;   
+        font-size: 1em;
+        height: 1.5em;  
+    }
+    @media screen and (min-width: 2500px){
+        font-size: 2em;
     }
 }
 
@@ -383,6 +390,7 @@ main img{
     bottom: 1.2em;
     font-size: 4.2em;
     color: #7e7e7e;
+    cursor: pointer;
     @media screen and (min-width: 1024px){
         right: 0.5em;
         bottom: 1em;
@@ -398,6 +406,7 @@ main img{
     font-size: 4.2em;
     right: 1em;
     bottom: 1.2em;
+    cursor: pointer;
     @include coeur;
     @media screen and (min-width: 1024px){
         right: 0.5em;
@@ -414,6 +423,7 @@ main img{
     position: absolute;
     right: 1.5em;
     top: 1em;
+    cursor: pointer;
     @media screen and (min-width: 1024px){
         right: 50%;
         top: 0.5em;
@@ -425,6 +435,7 @@ main img{
     position: absolute;
     right: 1.5em;
     top: 1em;
+    cursor: pointer;
     @media screen and (min-width: 1024px){
         right: 50%;
         top: 0.5em;
