@@ -37,6 +37,7 @@
 .menu__button{
     text-align: center;
     margin: 4em 0em 0em 0em;
+    margin: auto;
 }
 
 #presentation{
@@ -255,10 +256,7 @@ a{
         justify-content: center;
         display: flex;
         flex-direction: column;
-    }
-    main{
-        width:74%;
-        margin: auto;
+        width: 33%;
     }
 }
 
@@ -269,8 +267,8 @@ a{
 .fa-arrow-left:before{
     position: absolute;
     font-size: 3.5em;
-    left: 1em;
-    top: 1.3em;
+    left: 2em;
+    top: 0.6em;
 }
 main img{
     width: 100%;
@@ -278,6 +276,12 @@ main img{
     border-radius: 3em 3em 0em 0em;
     margin: 1em 0em -1em 0em;
     object-fit: cover;
+    @media screen and (min-width: 1024px){
+        height: 33em;
+    }
+    @media screen and (min-width: 2560px){
+        width: 41em;
+    }
 }
 
 .section__menu{
@@ -287,7 +291,15 @@ main img{
     border-radius: 7em 7em 0em 0em;
     margin-top: -12em;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+    @media screen and (min-width: 1024px){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @media screen and (min-width: 2500px){
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     & h2{
         font-family: 'robotolight';
         font-size: 2.5em;
@@ -307,8 +319,8 @@ main img{
         width: 6.5em;
         margin: -1.3em 0em 2em 0em;
         @media screen and (min-width: 1024px){
-            border-top: 5px solid $color-tertiary;
-            width: 41.8em;
+            border-top: 3px solid $color-tertiary;
+            width: 3.8em;
         }
     }
 }
@@ -325,11 +337,8 @@ main img{
     flex-wrap: nowrap;
     @media screen and (min-width: 1024px){
         height: 6em;
-        width: 70%;
+        width: 96%;
         margin-bottom: 1em;
-    }
-    @media screen and (min-width: 2560px){
-        width: 36%;
     }
     &__texte{
         display:flex;
@@ -345,7 +354,7 @@ main img{
         font-weight: bold;
         font-size: 2.5em;
         @media screen and (min-width: 1024px){
-            font-size: 1.5em;
+            font-size: 1.3em;
         }
     }
 }
@@ -362,7 +371,7 @@ main img{
         text-overflow: ellipsis;
         font-family: 'robotolight';
         @media screen and (min-width: 1024px){
-            font-size: 1.5em;
+            font-size: 1em;
         }
     }
 }
@@ -377,7 +386,7 @@ main img{
     text-overflow: ellipsis;
     @media screen and (min-width: 1024px){
         padding: 0em 0em 1.5em 0em;
-        font-size: 1.8em;
+        font-size: 1.3em;
     }
 }
 
