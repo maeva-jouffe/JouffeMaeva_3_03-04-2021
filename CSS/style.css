@@ -49,7 +49,7 @@
     width: 0;
   }
   100% {
-    width: 9em;
+    width: 10em;
   }
 }
 @font-face {
@@ -98,6 +98,12 @@ header {
   width: 47%;
   padding: 4em 0em 1em 0em;
 }
+@media screen and (min-width: 1024px) {
+  #logo {
+    width: 26%;
+    padding-top: 1.5em;
+  }
+}
 
 footer {
   background-color: #353535;
@@ -105,9 +111,20 @@ footer {
   flex-direction: column;
   margin-top: 5em;
 }
+@media screen and (min-width: 1024px) {
+  footer {
+    align-items: center;
+  }
+}
 footer img {
   width: 17em;
   margin: 3em 0em 0em 5em;
+}
+@media screen and (min-width: 1024px) {
+  footer img {
+    width: 23em;
+    margin: 1em 0em 0em 0em;
+  }
 }
 footer a {
   color: white;
@@ -116,8 +133,37 @@ footer ul {
   list-style-type: none;
   font-size: 2.7em;
 }
+@media screen and (min-width: 1024px) {
+  footer ul {
+    display: flex;
+    font-size: 1.8em;
+    padding: 0;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 2560px) {
+  footer ul {
+    font-size: 2.8em;
+  }
+}
 footer li {
   margin: 0em 0em 0.3em 1em;
+}
+@media screen and (min-width: 1024px) {
+  footer li {
+    margin: 1em 1em 0.3em 1em;
+    padding-right: 1em;
+    border-right: 2px solid white;
+    text-align: left;
+  }
+}
+
+.fa-hands-helping:before {
+  margin-right: 0.55em;
+}
+
+.fa-utensils:before {
+  margin-right: 1em;
 }
 
 .h1--font {
@@ -126,12 +172,14 @@ footer li {
   padding: 0.8em 0em 0em 0.6em;
   margin-bottom: 0em;
 }
-
-@media all and (max-width: 1024px) {
-  #accueil {
-    flex-direction: row;
+@media screen and (min-width: 1024px) {
+  .h1--font {
+    font-size: 3.3em;
+    text-align: center;
+    padding: 0.8em 0em 0em 0em;
   }
 }
+
 #map {
   background-color: #EAEAEA;
   box-shadow: inset 0 3px 5px -5px #2c2c2c;
@@ -141,13 +189,19 @@ footer li {
   justify-content: center;
   font-size: 2.9em;
 }
+@media screen and (min-width: 1024px) {
+  #map {
+    font-size: 1.9em;
+    height: 2em;
+  }
+}
 #map p {
   margin-left: 0.9em;
 }
 
 .btn {
   height: 2.7em;
-  width: 65%;
+  width: 13em;
   border-radius: 4.5em 4.5em 4.5em 4.5em;
   background: linear-gradient(#FF79DA, #9356DC);
   color: white;
@@ -155,10 +209,16 @@ footer li {
   border: white;
   margin: 0.9em 0em 2.9em 0em;
   box-shadow: 0em 0.4em 0.9em -0.5em #2c2c2c;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.3em;
+  }
 }
 .btn:hover {
   height: 2.7em;
-  width: 65%;
+  width: 13em;
   border-radius: 4.5em 4.5em 4.5em 4.5em;
   background: linear-gradient(#FAAFE5, #A77ED9);
   color: white;
@@ -167,6 +227,12 @@ footer li {
   margin: 0.9em 0em 2.9em 0em;
   box-shadow: 0em 1.5em 1.9em -0.8em #2c2c2c;
   cursor: pointer;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .btn:hover {
+    font-size: 1.3em;
+  }
 }
 
 .menu__button {
@@ -174,18 +240,22 @@ footer li {
   margin: 4em 0em 0em 0em;
 }
 
-h1 {
+#presentation {
+  background-color: #F6F6F6;
+}
+#presentation h1 {
   font-size: 3.5em;
   padding: 1em 3em 0em 3em;
   margin: 0;
 }
-
-#presentation {
-  background-color: #F6F6F6;
+@media screen and (min-width: 1024px) {
+  #presentation h1 {
+    font-size: 2.5em;
+  }
 }
 #presentation p {
   color: #7E7E7E;
-  font-size: 1.71em;
+  font-size: 1.91em;
   margin: 1em 1.9em 0em 1.9em;
 }
 
@@ -194,15 +264,28 @@ nav {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 1024px) {
+  nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
 nav h2 {
   font-size: 3.5em;
   left: 1em;
   align-self: flex-start;
   margin: 1.5em 0em 0.5em 1em;
 }
+@media screen and (min-width: 1024px) {
+  nav h2 {
+    width: 100%;
+    font-size: 1.8em;
+  }
+}
 
 .nav__fonctionnement {
-  height: 4em;
+  height: 5em;
   width: 21em;
   box-shadow: 0.2em 0.5em 1em #cecece;
   background: #F6F6F6;
@@ -214,10 +297,31 @@ nav h2 {
   justify-content: left;
   font-family: "robotobold";
 }
+.nav__fonctionnement:hover {
+  background-color: #f5edff;
+}
+@media screen and (min-width: 1024px) {
+  .nav__fonctionnement {
+    width: 30%;
+    font-size: 1em;
+    position: relative;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .nav__fonctionnement {
+    font-size: 2em;
+  }
+}
 .nav__fonctionnement i {
   margin: 0em 1em 0em 1.7em;
   color: #7E7E7E;
   font-size: 1.3em;
+}
+@media screen and (min-width: 1024px) {
+  .nav__fonctionnement i {
+    margin: 0em 0.5em 0em 0.7em;
+  }
 }
 
 .number {
@@ -233,6 +337,12 @@ nav h2 {
   position: absolute;
   left: 1.2em;
 }
+@media screen and (min-width: 1024px) {
+  .number {
+    top: -1em;
+    left: 50%;
+  }
+}
 
 #accueil {
   background-color: #F6F6F6;
@@ -243,11 +353,27 @@ nav h2 {
   padding-bottom: 8em;
   margin: 9em 0em -6em 0em;
 }
+@media screen and (min-width: 1024px) {
+  #accueil {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2em 0em -9em 0em;
+  }
+}
 #accueil h2 {
   font-size: 3.8em;
   left: 1em;
   align-self: flex-start;
   margin: 1.5em 0em 0.5em 1em;
+}
+@media screen and (min-width: 1024px) {
+  #accueil h2 {
+    width: 100%;
+    margin: 0.2em 0em 0.2em 0em;
+    text-align: center;
+    font-size: 2.8em;
+  }
 }
 #accueilimg {
   width: 20em;
@@ -268,6 +394,17 @@ nav h2 {
   right: 0.8em;
   border-radius: 0.2em;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__card--tag {
+    font-size: 1em;
+    height: 1.5em;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .restaurant__card--tag {
+    font-size: 2em;
+  }
+}
 
 .restaurant__card {
   background-color: white;
@@ -278,20 +415,65 @@ nav h2 {
   box-shadow: 0.2em 0.4em 0.3em #EAEAEA;
   position: relative;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__card {
+    width: 22%;
+    height: 17em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurant__card {
+    width: 40%;
+    height: 34em;
+  }
+}
 .restaurant__card img {
   width: 100%;
   height: 28em;
   border-radius: 2.1em 2.1em 0em 0em;
   object-fit: cover;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__card img {
+    height: 11em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurant__card img {
+    height: 27em;
+  }
+}
 .restaurant__card h3 {
   font-size: 3.5em;
   font-family: "robotobold";
   margin: 0.5em 0em 0em 0.8em;
 }
+@media screen and (min-width: 1024px) {
+  .restaurant__card h3 {
+    text-align: left;
+    margin: 0em 0em -0.5em 0.3em;
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurant__card h3 {
+    font-size: 2.5em;
+  }
+}
 .restaurant__card p {
   font-size: 2.7em;
   margin: -0.3em 0em 0em 1em;
+}
+@media screen and (min-width: 1024px) {
+  .restaurant__card p {
+    margin: 0em 0em 0em 0.5em;
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurant__card p {
+    font-size: 2em;
+  }
 }
 .restaurant__card p a:visited {
   color: #7E7E7E;
@@ -304,15 +486,20 @@ a:visited {
   color: inherit;
 }
 
-.fa-hands-helping:before {
-  margin-right: 0.55em;
-}
-
-.fa-utensils:before {
-  margin-right: 1em;
-}
-
 /*pages menu*/
+@media screen and (min-width: 1024px) {
+  article {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    width: 74%;
+    margin: auto;
+  }
+}
 .coeurtitre {
   margin-left: 1.5em;
 }
@@ -326,7 +513,10 @@ a:visited {
 
 main img {
   width: 100%;
+  height: 48em;
+  border-radius: 3em 3em 0em 0em;
   margin: 1em 0em -1em 0em;
+  object-fit: cover;
 }
 
 .section__menu {
@@ -342,14 +532,30 @@ main img {
   font-family: "robotolight";
   font-size: 2.5em;
 }
+@media screen and (min-width: 1024px) {
+  .section__menu h2 {
+    font-size: 1.5em;
+  }
+}
 
 .menu__title {
   margin: 6em 0em 0em 3em;
+}
+@media screen and (min-width: 1024px) {
+  .menu__title {
+    margin: 0;
+  }
 }
 .menu__title--underline {
   border-top: 9px solid #99E2D0;
   width: 6.5em;
   margin: -1.3em 0em 2em 0em;
+}
+@media screen and (min-width: 1024px) {
+  .menu__title--underline {
+    border-top: 5px solid #99E2D0;
+    width: 41.8em;
+  }
 }
 
 .menu__element {
@@ -363,15 +569,38 @@ main img {
   display: flex;
   flex-wrap: nowrap;
 }
+@media screen and (min-width: 1024px) {
+  .menu__element {
+    height: 6em;
+    width: 70%;
+    margin-bottom: 1em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .menu__element {
+    width: 36%;
+  }
+}
 .menu__element__texte {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .menu__element__texte {
+    padding: 0.5em 0em 0.2em 0.7em;
+  }
 }
 .menu__element__price {
   margin: 0em 1em 1em 0em;
   font-weight: bold;
   font-size: 2.5em;
+}
+@media screen and (min-width: 1024px) {
+  .menu__element__price {
+    font-size: 1.5em;
+  }
 }
 
 .menu__element__description {
@@ -386,14 +615,27 @@ main img {
   overflow: hidden;
   text-overflow: ellipsis;
   font-family: "robotolight";
-  max-width: 18.2em;
+}
+@media screen and (min-width: 1024px) {
+  .menu__element__description p {
+    font-size: 1.5em;
+  }
 }
 
-h3 {
+.menu__element__texte h3 {
   font-size: 2.8em;
   margin: 0em 0em 0em 0.5em;
   padding-top: 0.5em;
   font-family: "robotobold";
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 1024px) {
+  .menu__element__texte h3 {
+    padding: 0em 0em 1.5em 0em;
+    font-size: 1.8em;
+  }
 }
 
 /*animations*/
@@ -404,6 +646,19 @@ h3 {
   bottom: 1.2em;
   font-size: 4.2em;
   color: #7e7e7e;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .coeur {
+    right: 0.5em;
+    bottom: 1em;
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .coeur {
+    font-size: 2.8em;
+  }
 }
 
 .coeur-plein {
@@ -411,6 +666,7 @@ h3 {
   font-size: 4.2em;
   right: 1em;
   bottom: 1.2em;
+  cursor: pointer;
   background-image: linear-gradient(10deg, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -421,12 +677,31 @@ h3 {
 .coeur-plein:active {
   opacity: 1;
 }
+@media screen and (min-width: 1024px) {
+  .coeur-plein {
+    right: 0.5em;
+    bottom: 1em;
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .coeur-plein {
+    font-size: 2.8em;
+  }
+}
 
 /*coeur menu*/
 .coeurmenu {
   position: absolute;
   right: 1.5em;
   top: 1em;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  .coeurmenu {
+    right: 50%;
+    top: 0.5em;
+  }
 }
 
 .coeur-pleinmenu {
@@ -439,12 +714,19 @@ h3 {
   position: absolute;
   right: 1.5em;
   top: 1em;
+  cursor: pointer;
 }
 .coeur-pleinmenu:active {
   opacity: 1;
 }
+@media screen and (min-width: 1024px) {
+  .coeur-pleinmenu {
+    right: 50%;
+    top: 0.5em;
+  }
+}
 
-#heart1, #heart2, #heart3, #heart4 {
+#heart1, #heart2, #heart3, #heart4, #heart5, #heart6, #heart7, #heart8 {
   visibility: hidden;
 }
 

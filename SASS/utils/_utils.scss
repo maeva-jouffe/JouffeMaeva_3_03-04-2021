@@ -10,7 +10,7 @@ $color-button: linear-gradient($color-secondary, $color-primary);
 }
 @mixin btn{
     height: 2.7em;
-    width: 65%;
+    width: 13em;
     border-radius: 4.5em 4.5em 4.5em 4.5em;
     background: $color-button;
     color: white;
@@ -21,7 +21,7 @@ $color-button: linear-gradient($color-secondary, $color-primary);
 }
 @mixin btnhover{
     height: 2.7em;
-    width: 65%;
+    width: 13em;
     border-radius: 4.5em 4.5em 4.5em 4.5em;
     background: linear-gradient(#FAAFE5, #A77ED9);
     color: white;
@@ -96,6 +96,6 @@ $color-button: linear-gradient($color-secondary, $color-primary);
         width: 0;
     }
     100%{
-        width: 9em;
+        width: 10em;
     }
 }
