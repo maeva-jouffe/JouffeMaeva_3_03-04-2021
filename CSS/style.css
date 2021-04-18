@@ -104,6 +104,11 @@ header {
     padding-top: 1.5em;
   }
 }
+@media screen and (min-width: 2500px) {
+  #logo {
+    width: 23%;
+  }
+}
 
 footer {
   background-color: #353535;
@@ -183,6 +188,10 @@ footer li {
 @media screen and (min-width: 2500px) {
   .h1--font {
     width: 100%;
+    text-align: left;
+    padding: 0.5em 0em 0em 1em;
+    margin: 0;
+    color: #FF79DA;
   }
 }
 
@@ -222,6 +231,11 @@ footer li {
     font-size: 1.3em;
   }
 }
+@media screen and (min-width: 2500px) {
+  .btn {
+    font-size: 2.3em;
+  }
+}
 .btn:hover {
   height: 2.7em;
   width: 13em;
@@ -238,6 +252,11 @@ footer li {
 @media screen and (min-width: 1024px) {
   .btn:hover {
     font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .btn:hover {
+    font-size: 2.3em;
   }
 }
 
@@ -503,6 +522,13 @@ a:visited {
     width: 33%;
   }
 }
+@media screen and (min-width: 2560px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
 .coeurtitre {
   margin-left: 1.5em;
 }
@@ -511,7 +537,12 @@ a:visited {
   position: absolute;
   font-size: 3.5em;
   left: 2em;
-  top: 0.6em;
+  top: 1.3em;
+}
+@media screen and (min-width: 1024px) {
+  .fa-arrow-left:before {
+    top: 0.6em;
+  }
 }
 
 main img {
@@ -529,6 +560,9 @@ main img {
 @media screen and (min-width: 2560px) {
   main img {
     width: 41em;
+    margin: 0em 2em 0em 2em;
+    border-radius: 2em 2em 2em 2em;
+    height: 44.5em;
   }
 }
 
@@ -551,6 +585,10 @@ main img {
   .section__menu {
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 0;
+    border-radius: 2em;
+    margin-right: 2em;
+    background-color: white;
   }
 }
 .section__menu h2 {
@@ -560,6 +598,11 @@ main img {
 @media screen and (min-width: 1024px) {
   .section__menu h2 {
     font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .section__menu h2 {
+    font-size: 1.8em;
   }
 }
 
@@ -641,6 +684,11 @@ main img {
     font-size: 1em;
   }
 }
+@media screen and (min-width: 2560px) {
+  .menu__element__description p {
+    font-size: 1.5em;
+  }
+}
 
 .menu__element__texte h3 {
   font-size: 2.8em;
@@ -655,6 +703,11 @@ main img {
   .menu__element__texte h3 {
     padding: 0em 0em 1.5em 0em;
     font-size: 1.3em;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .menu__element__texte h3 {
+    font-size: 1.7em;
   }
 }
 
@@ -723,6 +776,11 @@ main img {
     top: 0.5em;
   }
 }
+@media screen and (min-width: 2500px) {
+  .coeurmenu {
+    right: 1em;
+  }
+}
 
 .coeur-pleinmenu {
   background-image: linear-gradient(10deg, #FF79DA, #9356DC);
@@ -743,6 +801,11 @@ main img {
   .coeur-pleinmenu {
     right: 50%;
     top: 0.5em;
+  }
+}
+@media screen and (min-width: 2500px) {
+  .coeur-pleinmenu {
+    right: 1em;
   }
 }
 
