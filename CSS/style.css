@@ -575,6 +575,7 @@ main img {
   .section__menu {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 }
 @media screen and (min-width: 2500px) {

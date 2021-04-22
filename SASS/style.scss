@@ -316,6 +316,7 @@ main img{
     @media screen and (min-width: 1024px){
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
     }
     @media screen and (min-width: 2500px){
         flex-direction: row;
