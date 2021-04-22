@@ -127,9 +127,6 @@ footer img {
     margin: 1em 0em 0em 0em;
   }
 }
-footer a {
-  color: white;
-}
 footer ul {
   list-style-type: none;
   font-size: 2.7em;
@@ -157,6 +154,13 @@ footer li {
     border-right: 2px solid white;
     text-align: left;
   }
+}
+
+footer a {
+  color: white;
+}
+footer a:visited {
+  color: white;
 }
 
 .fa-hands-helping:before {
@@ -550,7 +554,7 @@ main img {
 }
 @media screen and (min-width: 1024px) {
   main img {
-    height: 33em;
+    height: 41em;
   }
 }
 @media screen and (min-width: 2560px) {
@@ -633,6 +637,7 @@ main img {
   cursor: pointer;
   display: flex;
   flex-wrap: nowrap;
+  overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
   .menu__element {
@@ -659,7 +664,7 @@ main img {
 }
 @media screen and (min-width: 1024px) {
   .menu__element__price {
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 
@@ -874,10 +879,10 @@ main img {
   border-radius: 0em 2.5em 2.5em 0em;
 }
 
-.menu__element:active .cloche {
+.menu__element:hover .cloche {
   animation: cloche 1s forwards;
 }
-.menu__element:active .cloche > .check {
+.menu__element:hover .cloche > .check {
   animation: check 1s forwards;
   overflow: hidden;
 }

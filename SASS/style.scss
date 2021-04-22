@@ -295,7 +295,7 @@ main img{
     margin: 1em 0em -1em 0em;
     object-fit: cover;
     @media screen and (min-width: 1024px){
-        height: 33em;
+        height: 41em;
     }
     @media screen and (min-width: 2560px){
         width: 41em;
@@ -364,6 +364,7 @@ main img{
     cursor: pointer;
     display: flex;
     flex-wrap: nowrap;
+    overflow: hidden;
     @media screen and (min-width: 1024px){
         height: 6em;
         width: 96%;
@@ -383,7 +384,7 @@ main img{
         font-weight: bold;
         font-size: 2.5em;
         @media screen and (min-width: 1024px){
-            font-size: 1.3em;
+            font-size: 1.1em;
         }
     }
 }
@@ -563,7 +564,7 @@ main img{
     border-radius: 0em 2.5em 2.5em 0em;
 }
 
-.menu__element:active .cloche{
+.menu__element:hover .cloche{
    animation: cloche 1s forwards;
    >.check{
        animation: check 1s forwards;
