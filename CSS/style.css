@@ -491,6 +491,9 @@ nav h2 {
   font-size: 2.7em;
   margin: -0.3em 0em 0em 1em;
 }
+.restaurant__card p a:visited {
+  color: #7E7E7E;
+}
 @media screen and (min-width: 1024px) {
   .restaurant__card p {
     margin: 0em 0em 0em 0.5em;
@@ -501,9 +504,6 @@ nav h2 {
   .restaurant__card p {
     font-size: 2em;
   }
-}
-.restaurant__card p a:visited {
-  color: #7E7E7E;
 }
 
 a {
