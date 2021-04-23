@@ -473,6 +473,7 @@ nav h2 {
   font-size: 3.5em;
   font-family: "robotobold";
   margin: 0.5em 0em 0em 0.8em;
+  color: black;
 }
 @media screen and (min-width: 1024px) {
   .restaurant__card h3 {
