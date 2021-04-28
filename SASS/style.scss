@@ -2,6 +2,7 @@
 @import "./base/base.scss";
 @import "./layouts/layouts.scss";
 
+/* Page d'accueil*/
 #map{
     background-color: $color-background-darken;
     box-shadow: inset 0 3px 5px -5px #2c2c2c;
@@ -248,12 +249,12 @@ nav{
         } 
     }
 }
+
 a{
     text-decoration: none;
-    &:visited{
-        color: inherit;
-    }
+    color: inherit;
 }
+
 
 
 /*pages menu*/
@@ -425,6 +426,7 @@ main img{
         font-size: 1.7em;
     }
 }
+
 
 /*animations*/
 
